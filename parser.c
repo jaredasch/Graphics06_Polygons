@@ -157,6 +157,12 @@ void parse_file(char * filename, struct matrix * transform, struct matrix * edge
             display(s);
         } else if (strcmp(line, "clear") == 0){
             edges->lastcol = 0;
+        } else if (strcmp(line, "colorset") == 0){
+            fgets(line, 1024, f);
+            args = parse_args(line);
+            c.red = atoi(args[0]);
+            c.green = atoi(args[1]);
+            c.blue = atoi(args[2]);
         } else if(strcmp(line, "quit") == 0) {
             return;
         }
