@@ -106,7 +106,7 @@ void parse_file(char * filename, struct matrix * transform, struct matrix * edge
         } else if (strcmp(line, "torus") == 0){
             fgets(line, 1024, f);
             args = parse_args(line);
-            add_torus(polygons, atof(args[0]), atof(args[1]), atof(args[2]), atof(args[3]), atof(args[4]), 20);
+            add_torus(polygons, atof(args[0]), atof(args[1]), atof(args[2]), atof(args[3]), atof(args[4]), 30);
         } else if (strcmp(line, "ident") == 0) {
             ident(transform);
         } else if (strcmp(line, "scale") == 0) {
